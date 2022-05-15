@@ -52,6 +52,9 @@ patch /warehouse/{warehouseId}/{itemId} is used to edit the quanity of an item i
 delete /warehouse/{warehouseId}/{itemId} will delete a specific item from a specific warehouse
 
 
+Thats all for today folks! 
+
+
 
 
 
