@@ -23,32 +23,43 @@ When you assign an item to a warehouse with a specific quantity it automatically
 When sending requests make sure the body is in json format
 
 
-Walkthrough of some routes
-
-For the items route use the GET, POST, PATCH, and DELETE calls on the /items endpoint 
-Screenshots of sample request, request body, and responses are provided below!
-
 WALKTHROUGH OF ITEMS ROUTE/FUNCTIONALITY
 
-GET ALL ITEMS
+Get /items will get all the items you created
 
-<img width="858" alt="image" src="https://user-images.githubusercontent.com/66037084/168487629-c02e4a93-e639-4681-8313-35251e8a6be7.png">
-<img width="1118" alt="image" src="https://user-images.githubusercontent.com/66037084/168487639-b6bfa25e-97d0-4c8c-b07d-65e70df8bf5d.png">
+Post /items will create a new item - to do this you must send the req in json format - example below
 
-ADD A NEW ITEM
+<img width="712" alt="image" src="https://user-images.githubusercontent.com/66037084/168488611-ed8221e9-335f-44bf-ab8d-f4461d86b15d.png">
 
-<img width="690" alt="image" src="https://user-images.githubusercontent.com/66037084/168487736-e3729dd3-c2bc-4c44-b021-7422330f6aa0.png">
+Patch /items/{itemId} will edit an already existing item 
 
-EDIT an existing Item
-
-<img width="653" alt="image" src="https://user-images.githubusercontent.com/66037084/168487809-5c7582dc-902b-408a-890c-27039699e501.png">
-
-Delte an existem Item
-
-<img width="618" alt="image" src="https://user-images.githubusercontent.com/66037084/168487837-0e9f1a86-912a-40d6-b399-c0a20ca0f60b.png">
-
+Delete /items/{itemId} will delete an already existing item and remove it from its corresponding warehouses
 
 WALKTHROUGH OF WAREHOUSE ROUTE/FUNCTIONALITY
+
+get /warehouse will get a list all the warehouses
+
+get /warehouse/{warehouseId} will get all the information for a specific warehouse
+
+post /warehouse will create a new warehouse - to do this you must send the req in json format - example below
+
+<img width="554" alt="image" src="https://user-images.githubusercontent.com/66037084/168488884-881a7bd9-a4e2-4ed0-b9b5-2407f208caf2.png">
+
+post /warehouse/{warehouseId}/{itemId} will add a specific item that already exists in the items route to a specific warehouse
+
+patch /warehouse/{warehouseId}/{itemId} is used to edit the quanity of an item in a specific warehouse
+
+delete /warehouse/{warehouseId}/{itemId} will delete a specific item from a specific warehouse
+
+
+
+
+
+
+
+
+
+
 
 
 
