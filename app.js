@@ -16,7 +16,7 @@ app.use("/items", itemsRoute);
 app.use("/warehouse", warehouseRoute);
 
 app.get("/", (req, res) => {
-  res.send("we are on home");
+  res.send("Welcome to a warehouse inventory management system");
 });
 
 mongoose
