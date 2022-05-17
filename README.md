@@ -9,16 +9,17 @@ The replit link for the project is https://shopify-fall-2022-challenge.isaaclall
 Features and Walkthrough
 
 This app contains the following features -
-Create, delete, update and get Items each having configurable attributes
-Create, delete, update and get  warehouses with configurable attributes
-Assign items to those warehouses
-Create, delete, update any item in the warehouse 
+1. Create, delete, update and get Items each having configurable attributes
+2. Create, delete, update and get  warehouses with configurable attributes
+3. Assign items to those warehouses
+4. Create, delete, update any item in the warehouse 
 
 The design follow works as follows:
-There are two router : The item route  and the warehouse route
-The Item route gives you information about the item and which warehouses currently store that item and the total quantity of that item that is not assigned  to any warehouse
-The warehouse route gives you information about what warehouses are their and what items they contain
-When you assign an item to a warehouse with a specific quantity it automatically updates the total inventory left in the items route
+There are two routes:
+- The item route  and the warehouse route
+- The Item route gives you information about the item and which warehouses currently store that item and the total quantity of that item that is not assigned  to any warehouse
+- The warehouse route gives you information about what warehouses are their and what items they contain
+- When you assign an item to a warehouse with a specific quantity it automatically updates the total inventory left in the items route
 
 When sending requests make sure the body is in json format
 
