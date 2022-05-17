@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 const router = express.Router();
 const { Item, Warehouse, WarehouseItem } = require("../model/item");
 
-// define better errors but we are mostly done !
-
 router.get("/:warehouseId", async (req, res) => {
   try {
     warehouse = await Warehouse.findById(req.params.warehouseId);
@@ -85,6 +83,12 @@ router.patch("/:warehouseId/:itemId", async (req, res) => {
     }
     delta = warehouse.inventory[j].quantity - req.body.quantity;
     item.quantity = item.quantity + delta;
+    if (item.quantity < 0) {
+      return res.status(409).json({
+        message:
+          "Not enough inventory of item left please choose a valid amount",
+      });
+    }
     warehouse.inventory[j].quantity = req.body.quantity;
     item.save();
     warehouse.save();
