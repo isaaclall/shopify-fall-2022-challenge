@@ -6,7 +6,7 @@ The replit link for the project is https://shopify-fall-2022-challenge.isaaclall
 
 
 
-Features and Walkthrough
+# Features and Walkthrough
 
 This app contains the following features -
 1. Create, delete, update and get Items each having configurable attributes
@@ -24,7 +24,7 @@ There are two routes:
 When sending requests make sure the body is in json format
 
 
-WALKTHROUGH OF ITEMS ROUTE/FUNCTIONALITY
+# WALKTHROUGH OF ITEMS ROUTE/FUNCTIONALITY
 
 Get /items will get all the items you created
 
@@ -36,7 +36,7 @@ Patch /items/{itemId} will edit an already existing item
 
 Delete /items/{itemId} will delete an already existing item and remove it from its corresponding warehouses
 
-WALKTHROUGH OF WAREHOUSE ROUTE/FUNCTIONALITY
+# WALKTHROUGH OF WAREHOUSE ROUTE/FUNCTIONALITY
 
 get /warehouse will get a list all the warehouses
 
